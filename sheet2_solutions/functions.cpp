@@ -72,8 +72,9 @@ int remove_dupes(int arr[] , int arr_size){
 
 for(int i = 0 ; i<arr_size ; i++){
     for(int j = i+1 ; j<arr_size;j++){
-        if(arr[i] == arr[j])
+        if(arr[i] == arr[j]){
             arr_size = delete_value(arr , arr_size, j);
+             j--;}
     }
 }
 return arr_size;
